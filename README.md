@@ -15,22 +15,11 @@ Building a website akin to OpenSea necessitates a deep understanding of the dive
 ### Features
 
 My platform will include and not limited to foolowing fuctionality:
-1.User Registration and Profile Management:Users can create and manage their profiles, including setting up digital wallets for transactions.
-2.Wallet Integration: Integration with popular blockchain wallets to enable users to securely store, send, and receive NFTs.
-3.NFT Minting: Artists and creators can mint new NFTs, specifying details like title, description, and royalty percentages.
-4.NFT Browsing and Discovery: A feature-rich browsing experience that allows users to discover NFTs by categories, collections, or artists, including search and filter options.
-5.Auction and Fixed-Price Sales: Users can list NFTs for sale either through an auction or at a fixed price, including setting minimum bids and auction durations.
-6.Buying NFTs: Secure transaction processes for users to buy NFTs, either through bidding in auctions or purchasing at fixed prices.
-7.Selling and Trading NFTs: Enable users to list their NFTs for sale or trade, including the ability to accept offers from potential buyers.
-8.Royalties Management: Implementation of smart contracts that automatically distribute royalties to creators on secondary sales.
-9.User Dashboards: Personalized dashboards for users to track their activity, manage their collections, and view transaction history.
-10.Ratings and Reviews: A system for users to rate and review NFTs and sellers, enhancing trust and credibility within the platform.
-11.Social Features and Community Engagement: Features such as forums, comment sections, and social sharing to foster community engagement among users.
-12.Notifications and Alerts: Real-time notifications for bids, auctions ending, new collections, and other relevant activities.
-13.Educational Resources: A section dedicated to educating new users about NFTs, blockchain technology, and how to safely buy and sell digital assets.
-14.API for Developers: Providing an API for developers to create third-party applications, enhancing the ecosystem around the marketplace.
-15.Admin Panel for Content Moderation: Tools for administrators to manage listings, moderate content, and enforce community guidelines.
-16.Analytics and Reporting: Analytics tools for users to gain insights into their sales performance, market trends, and more.
+1.NFT Minting: Artists and creators can mint new NFTs, specifying details like title, description, and royalty percentages.
+2.NFT Browsing and Discovery: A feature-rich browsing experience that allows users to discover NFTs by categories, collections, or artists, including search and filter options.
+3.Buying NFTs: Secure transaction processes for users to buy NFTs, either through bidding in auctions or purchasing at fixed prices.
+4.Selling and Trading NFTs: Enable users to list their NFTs for sale or trade, including the ability to accept offers from potential buyers.
+5.User Dashboards: Personalized dashboards for users to track their activity, manage their collections, and view transaction history.
 
 ## Implementation
 
