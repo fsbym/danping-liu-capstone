@@ -17,7 +17,7 @@ export default function Footer() {
           </Col>
           <Col>
             <p>
-              Copyright © {new Date().getFullYear()} Freeform. All rights
+              Copyright © {new Date().getFullYear()} Freeform Ltd. All rights
               reserved.
             </p>
           </Col>
