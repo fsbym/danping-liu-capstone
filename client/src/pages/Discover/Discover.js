@@ -4,6 +4,7 @@ export default function Discover() {
   const [nftName, setNftName] = useState("");
   const [nftDescription, setNftDescription] = useState("");
   const [id] = useParams();
+
   return (
     <section className="discover">
       <article className="dis">
@@ -18,6 +19,7 @@ export default function Discover() {
             have been entertained many years ago.{" "}
           </p>
         </div>
+        <button>Buy</button>
       </article>
     </section>
   );
