@@ -5,7 +5,7 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer.jsx"
 // import Home from "./pages/Home";
 // import About from "./pages/About";
-// import Discover from "./pages/Discover";
+import Discover from "./pages/Discover/Discover.jsx"
 // import Mint from "./pages/Mint";
 // import Profile from "./pages/Profile";
 // import User from "./pages/User";
@@ -20,8 +20,8 @@ function App() {
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}
             {/* <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/discover" element={<Discover />} />
-        <Route path="/mint" element={<Mint />} /> */}
+            <Route path="/discover" element={<Discover />} />
+            {/* <Route path="/mint" element={<Mint />} /> */}
             {/* <Route path="/profile" element={<Profile />} /> */}
             {/* <Route path="/:id" element={<User />} /> */}
             {/* <Route path="*" element={<NoMatch />} /> */}
