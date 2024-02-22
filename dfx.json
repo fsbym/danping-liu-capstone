@@ -1,20 +1,29 @@
 {
   "canisters": {
-    "backend": {
-      "type": "motoko",
-      "main": "backend/Backend.mo"
+    "danping_backend": {
+      "main": "src/danping_backend/main.mo",
+      "type": "motoko"
     },
-    "frontend": {
-      "dependencies": ["backend"],
-      "type": "assets",
-      "source": ["dist/"]
+    "danping_frontend": {
+      "dependencies": [
+        "danping_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/danping_frontend/src/index.html"
+      },
+      "source": [
+        "src/danping_frontend/assets",
+        "dist/danping_frontend/"
+      ],
+      "type": "assets"
     }
   },
   "defaults": {
     "build": {
-      "packtool": "npm run --silent sources"
+      "args": "",
+      "packtool": ""
     }
   },
   "output_env_file": ".env",
-  "version": 2
+  "version": 1
 }
