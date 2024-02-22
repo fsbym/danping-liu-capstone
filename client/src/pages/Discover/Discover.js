@@ -7,20 +7,13 @@ export default function Discover() {
 
   return (
     <section className="discover">
-      <article className="dis">
-        <div className="dis__head">
-          <h2>A short heading</h2>
+      <h3 className="discover__title">Discover</h3>
+      <div className="discover__grid">
+        <div className="discover__grid--item">
+          <div className="discover__content"></div>
+          <Item />
         </div>
-        <img src="balloons.jpg" alt="Hot air balloons" />
-        <div className="dis__content">
-          <p>
-            {" "}
-            The idea of reaching the North Pole by means of balloons appears to
-            have been entertained many years ago.{" "}
-          </p>
-        </div>
-        <button>Buy</button>
-      </article>
+      </div>
     </section>
   );
 }
