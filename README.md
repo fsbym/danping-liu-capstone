@@ -1,63 +1,52 @@
-# danping-liu-NFTMarketplace
+# Vite + React + Motoko
 
-## Overview
+### Get started directly in your browser:
 
-I want to creating a website for NFT exchange involves building a platform where users can buy, sell, or trade Non-Fungible Tokens (NFTs), which are digital assets verified using blockchain technology to certify ownership and authenticity. This platform would need to integrate with various blockchain networks where NFTs are hosted (such as Ethereum, Polygon, etc.), provide secure wallet connections for users to manage their assets, and offer a user-friendly interface for browsing, listing, and transacting NFTs. Additionally, it should include features for price setting, auctions, and possibly community engagement tools to foster a vibrant marketplace.
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/vite-react-motoko)
 
-### Problem
+This template gives you everything you need to build a full-stack Web3 application on the [Internet Computer](https://internetcomputer.org/).
 
-Beside Javascript, react, node, and express, I need to use Motoko as a specific programming language to help deal with thing realted to NFT.
+For an example of a real-world dapp built using this starter project, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
 
-### User Profile
+## 📦 Create a New Project
 
-Building a website akin to OpenSea necessitates a deep understanding of the diverse ecosystem of users and technological intricacies involved. my platform will cater to a wide array of users including collectors, artists, gamers, developers, and traders, each engaging in activities like browsing, buying, selling, minting, and community participation. Key considerations for success include ensuring robust security and trust, providing an exceptional user experience, integrating with the right blockchains, adhering to legal and regulatory requirements, fostering a strong community, and prioritizing sustainability. Addressing these considerations with strategic planning and thoughtful design is essential for creating a platform that stands out in the dynamic and competitive NFT marketplace landscape.
+Make sure that [Node.js](https://nodejs.org/en/) `>= 16` and [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.14` are installed on your system.
 
-### Features
+Run the following commands in a new, empty project directory:
 
-My platform will include and not limited to foolowing fuctionality:
-1.NFT Minting: Artists and creators can mint new NFTs, specifying details like title, description, and royalty percentages.
-2.NFT Browsing and Discovery: A feature-rich browsing experience that allows users to discover NFTs by categories, collections, or artists, including search and filter options.
-3.Buying NFTs: Secure transaction processes for users to buy NFTs, either through bidding in auctions or purchasing at fixed prices.
-4.Selling and Trading NFTs: Enable users to list their NFTs for sale or trade, including the ability to accept offers from potential buyers.
-5.User Dashboards: Personalized dashboards for users to track their activity, manage their collections, and view transaction history.
+```sh
+npx degit rvanasa/vite-react-motoko # Download this starter project
+dfx start --clean --background # Run dfx in the background
+npm run setup # Install packages, deploy canisters, and generate type bindings
 
-## Implementation
+npm start # Start the development server
+```
 
-### Tech Stack
+When ready, run `dfx deploy --network ic` to deploy your application to the Internet Computer.
 
-Frontend:Javascript, React, CSS
-Backend: Node, Express, Motoko
+## 🛠️ Technology Stack
 
-### APIs
+- [Vite](https://vitejs.dev/): high-performance tooling for front-end web development
+- [React](https://reactjs.org/): a component-based UI library
+- [TypeScript](https://www.typescriptlang.org/): JavaScript extended with syntax for types
+- [Sass](https://sass-lang.com/): an extended syntax for CSS stylesheets
+- [Prettier](https://prettier.io/): code formatting for a wide range of supported languages
+- [Motoko](https://github.com/dfinity/motoko#readme): a safe and simple programming language for the Internet Computer
+- [Mops](https://mops.one): an on-chain community package manager for Motoko
+- [mo-dev](https://github.com/dfinity/motoko-dev-server#readme): a live reload development server for Motoko
 
-To develop a comprehensive NFT marketplace,there are two primary components: the NFT products themselves and a digital currency (token) that can be used within the platform for transactions.
+## 📚 Documentation
 
-### Sitemap
+- [Vite developer docs](https://vitejs.dev/guide/)
+- [React quick start guide](https://react.dev/learn)
+- [Internet Computer docs](https://internetcomputer.org/docs/current/developer-docs/ic-overview)
+- [`dfx.json` reference schema](https://internetcomputer.org/docs/current/references/dfx-json-reference/)
+- [Motoko developer docs](https://internetcomputer.org/docs/current/developer-docs/build/cdks/motoko-dfinity/motoko/)
+- [Mops usage instructions](https://j4mwm-bqaaa-aaaam-qajbq-cai.ic0.app/#/docs/install)
 
-For a comprehensive NFT marketplace, having distinct pages dedicated to discovery, minting, and user-owned NFTs (MyNFTs) is essential for a seamless user experience. Below is an overview of the purpose and key features for each of these pages: 1. Discover Page: To allow users to explore and discover NFTs available for purchase or auction on the platform. 2. Minting Page: To provide creators and artists with a simple and intuitive interface for creating (minting) new NFTs. 3. MyNFTs Page: To enable users to view and manage their own NFT collection, including items they've created, bought, or are currently selling.
+## 💡 Tips and Tricks
 
-### Mockups
-
-TBD
-
-### Data
-
-TBD
-
-### Endpoints
-
-TBD
-
-### Auth
-
-TBD
-
-## Roadmap
-
-Sprint One: Setting up frontend website by EOD of Feb 18th.
-Sprint Two: Migrating token and NFT and setting up backend server by EOD od Feb 22th.
-Sprint Three: Testing and Debugging by EOD of Feb 25.
-
-## Nice-to-haves
-
-I am going to design my own Crypto Token for trading NFT.
+- Customize your project's code style by editing the `.prettierrc` file and then running `npm run format`.
+- Reduce the latency of update calls by passing the `--emulator` flag to `dfx start`.
+- Install a Motoko package by running `npx ic-mops add <package-name>`. Here is a [list of available packages](https://mops.one/).
+- Split your frontend and backend console output by running `npm run frontend` and `npm run backend` in separate terminals.
