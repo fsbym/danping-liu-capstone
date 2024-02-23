@@ -1,0 +1,31 @@
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.Header {
+  @include flex-direction(row);
+  display: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: $primary-black;
+}
+
+.logo {
+  @include flex-direction(row);
+  display: wrap;
+  color: $primary-white;
+}
+
+.nav {
+  @include flex-direction(row);
+  display: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__disco,
+  &__ids,
+  &__mint {
+    color: $primary-white;
+  }
+}

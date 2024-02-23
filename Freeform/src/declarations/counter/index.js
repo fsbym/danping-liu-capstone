@@ -1,43 +1,40 @@
-import { Actor, HttpAgent } from "@dfinity/agent";
+import { Actor, HttpAgent } from "@dfinity/agent"
 
 // Imports and re-exports candid interface
-import { idlFactory } from "./counter.did.js";
-export { idlFactory } from "./counter.did.js";
+import { idlFactory } from "./counter.did.js"
+export { idlFactory } from "./counter.did.js"
+// CANISTER_ID is replaced by webpack based on node environment
+export const canisterId = process.env.OPEND_CANISTER_ID
 
-/* CANISTER_ID is replaced by webpack based on node environment
- * Note: canister environment variable will be standardized as
- * process.env.CANISTER_ID_<CANISTER_NAME_UPPERCASE>
- * beginning in dfx 0.15.0
+/**
+ *
+ * @param {string | import("@dfinity/principal").Principal} canisterId Canister ID of Agent
+ * @param {{agentOptions?: import("@dfinity/agent").HttpAgentOptions; actorOptions?: import("@dfinity/agent").ActorConfig}} [options]
+ * @return {import("@dfinity/agent").ActorSubclass<import("./opend.did.js")._SERVICE>}
  */
-export const canisterId =
-  process.env.CANISTER_ID_COUNTER ||
-  process.env.COUNTER_CANISTER_ID;
-
-export const createActor = (canisterId, options = {}) => {
-  const agent = options.agent || new HttpAgent({ ...options.agentOptions });
-
-  if (options.agent && options.agentOptions) {
-    console.warn(
-      "Detected both agent and agentOptions passed to createActor. Ignoring agentOptions and proceeding with the provided agent."
-    );
-  }
+export const createActor = (canisterId, options) => {
+  const agent = new HttpAgent({ ...options?.agentOptions })
 
   // Fetch root key for certificate validation during development
-  if (process.env.DFX_NETWORK !== "ic") {
+  if (process.env.NODE_ENV !== "production") {
     agent.fetchRootKey().catch((err) => {
       console.warn(
-        "Unable to fetch root key. Check to ensure that your local replica is running"
-      );
-      console.error(err);
-    });
+        "Unable to fetch root key. Check to ensure that your local replica is running",
+      )
+      console.error(err)
+    })
   }
 
   // Creates an actor with using the candid interface and the HttpAgent
   return Actor.createActor(idlFactory, {
     agent,
     canisterId,
-    ...options.actorOptions,
-  });
-};
+    ...options?.actorOptions,
+  })
+}
 
-export const counter = canisterId ? createActor(canisterId) : undefined;
+/**
+ * A ready-to-use agent for the opend canister
+ * @type {import("@dfinity/agent").ActorSubclass<import("./opend.did.js")._SERVICE>}
+ */
+export const counter = createActor(canisterId)
