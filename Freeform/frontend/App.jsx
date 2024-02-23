@@ -18,9 +18,9 @@ function App() {
         <Header />
         <section className="app__content">
           <Routes>
-            <Route path="/" element={<Discover />} />
+            {/* <Route path="/" element={<Discover />} /> */}
             {/* <Route path="/about" element={<About />} /> */}
-            <Route path="/discover" element={<Discover />} />
+            {/* <Route path="/discover" element={<Discover />} /> */}
             <Route path="/mint" element={<Mint />} />
             {/* <Route path="/profile" element={<Profile />} /> */}
             {/* <Route path="/:id" element={<User />} /> */}

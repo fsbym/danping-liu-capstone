@@ -1,14 +1,16 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Container, Nav, Navbar } from "react-bootstrap"
+import logo from "../../assets/logo.jpg"
 import "./Header.scss"
 
 export default function Header() {
   return (
     <Navbar bg="light" data-bs-theme="light">
       <Container className="Header">
-        <Navbar.Brand href="/" className="logo">
-          Freeform
-        </Navbar.Brand>
+        <Link href="/" className="logo">
+          <img src={logo} className="logo__photo" />
+        </Link>
         <Nav className="nav">
           <Nav.Link href="/discover" className="nav__disco">
             Discover

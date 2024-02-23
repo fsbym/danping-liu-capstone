@@ -1,9 +1,14 @@
 import type { Principal } from '@dfinity/principal';
+import type { ActorMethod } from '@dfinity/agent';
+import type { IDL } from '@dfinity/candid';
+
 export interface NFT {
-  'getAsset' : () => Promise<Array<number>>,
-  'getCanisterId' : () => Promise<Principal>,
-  'getName' : () => Promise<string>,
-  'getOwner' : () => Promise<Principal>,
-  'transferOwnership' : (arg_0: Principal) => Promise<string>,
+  'getAsset' : ActorMethod<[], Uint8Array | number[]>,
+  'getCanisterId' : ActorMethod<[], Principal>,
+  'getName' : ActorMethod<[], string>,
+  'getOwner' : ActorMethod<[], Principal>,
+  'transferOwnership' : ActorMethod<[Principal], string>,
 }
 export interface _SERVICE extends NFT {}
+export declare const idlFactory: IDL.InterfaceFactory;
+export declare const init: ({ IDL }: { IDL: IDL }) => IDL.Type[];

@@ -15,6 +15,11 @@
   @include flex-direction(row);
   display: wrap;
   color: $primary-white;
+
+  &__photo {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .nav {

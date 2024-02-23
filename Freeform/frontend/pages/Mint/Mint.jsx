@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import { counter } from "../../../src/declarations/counter"
-import { Principal } from "@dfinity/principal"
 import Item from "../../components/Item/Item"
 
 export default function Mint() {
@@ -41,8 +40,8 @@ export default function Mint() {
               accept="image/x-png,image/jpeg,image/gif,image/svg+xml,image/webp"
             />
           </div>
-          <h6 className="mint__uploadwrapper--text1">Collection Name</h6>
-          <div className="form-FormControl-root form-TextField-root form-FormControl-marginNormal form-FormControl-fullWidth">
+          <h6 className="mint__text1">Collection Name</h6>
+          <div className="mint__photo">
             <div className="form-InputBase-root form-OutlinedInput-root form-InputBase-fullWidth form-InputBase-formControl">
               <input
                 {...register("name", { required: true })}

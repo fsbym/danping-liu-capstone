@@ -1,16 +1,17 @@
 import type { Principal } from '@dfinity/principal';
+import type { ActorMethod } from '@dfinity/agent';
+import type { IDL } from '@dfinity/candid';
+
 export interface _SERVICE {
-  'completePurchase' : (
-      arg_0: Principal,
-      arg_1: Principal,
-      arg_2: Principal,
-    ) => Promise<string>,
-  'getListedNFTPrice' : (arg_0: Principal) => Promise<bigint>,
-  'getListedNFTs' : () => Promise<Array<Principal>>,
-  'getOpenDCanisterID' : () => Promise<Principal>,
-  'getOriginalOwner' : (arg_0: Principal) => Promise<Principal>,
-  'getOwnedNFTs' : (arg_0: Principal) => Promise<Array<Principal>>,
-  'isListed' : (arg_0: Principal) => Promise<boolean>,
-  'listItem' : (arg_0: Principal, arg_1: bigint) => Promise<string>,
-  'mint' : (arg_0: Array<number>, arg_1: string) => Promise<Principal>,
+  'completePurchase' : ActorMethod<[Principal, Principal, Principal], string>,
+  'getListedNFTPrice' : ActorMethod<[Principal], bigint>,
+  'getListedNFTs' : ActorMethod<[], Array<Principal>>,
+  'getOpenDCanisterID' : ActorMethod<[], Principal>,
+  'getOriginalOwner' : ActorMethod<[Principal], Principal>,
+  'getOwnedNFTs' : ActorMethod<[Principal], Array<Principal>>,
+  'isListed' : ActorMethod<[Principal], boolean>,
+  'listItem' : ActorMethod<[Principal, bigint], string>,
+  'mint' : ActorMethod<[Uint8Array | number[], string], Principal>,
 }
+export declare const idlFactory: IDL.InterfaceFactory;
+export declare const init: ({ IDL }: { IDL: IDL }) => IDL.Type[];
