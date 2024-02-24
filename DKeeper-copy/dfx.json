@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Dkeeper_backend": {
+      "main": "src/Dkeeper_backend/main.mo",
+      "type": "motoko"
+    },
+    "Dkeeper_frontend": {
+      "dependencies": [
+        "Dkeeper_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Dkeeper_frontend/src/index.html"
+      },
+      "source": [
+        "src/Dkeeper_frontend/assets",
+        "dist/Dkeeper_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
