@@ -8,5 +8,5 @@
     "allowJs": true /* Allow javascript files to be compiled. */,
     "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
   },
-  "include": ["../DKeeper/src/**/*"]
+  "include": ["src/**/*"]
 }
