@@ -1,7 +1,7 @@
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-function Note(props) {
+export default function Note(props) {
   function handleClick() {
     props.onDelete(props.id);
   }
@@ -16,5 +16,3 @@ function Note(props) {
     </div>
   );
 }
-
-export default Note;
