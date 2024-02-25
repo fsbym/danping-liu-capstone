@@ -1,102 +1,65 @@
-# danping-liu-NFTMarketplace
+# Dkeeper
+
+[Dkeeper](https://4rylk-6yaaa-aaaao-a3ibq-cai.icp0.io/)
 
 ## Overview
 
-I want to creating a website for NFT exchange involves building a platform where users can buy, sell, or trade Non-Fungible Tokens (NFTs), which are digital assets verified using blockchain technology to certify ownership and authenticity. This platform would need to integrate with various blockchain networks where NFTs are hosted (such as Ethereum, Polygon, etc.), provide secure wallet connections for users to manage their assets, and offer a user-friendly interface for browsing, listing, and transacting NFTs. Additionally, it should include features for price setting, auctions, and possibly community engagement tools to foster a vibrant marketplace.
-
-### Problem
-
-Beside Javascript, react, node, and express, I need to use Motoko as a specific programming language to help deal with thing realted to NFT.
-
-### User Profile
-
-Building a website akin to OpenSea necessitates a deep understanding of the diverse ecosystem of users and technological intricacies involved. my platform will cater to a wide array of users including collectors, artists, gamers, developers, and traders, each engaging in activities like browsing, buying, selling, minting, and community participation. Key considerations for success include ensuring robust security and trust, providing an exceptional user experience, integrating with the right blockchains, adhering to legal and regulatory requirements, fostering a strong community, and prioritizing sustainability. Addressing these considerations with strategic planning and thoughtful design is essential for creating a platform that stands out in the dynamic and competitive NFT marketplace landscape.
+Welcome to Dkeeper, your innovative venture into blockchain technology and the Internet Computer platform. This project marks the beginning of an exciting journey, and we're delighted to have you onboard. As part of the Dkeeper community, you're now among pioneers exploring the forefront of decentralized applications. Our documentation will guide you through setting up, developing, and deploying your projects, ensuring a smooth and enriching experience. Let's embark on this transformative journey together, shaping the future of the digital world.
 
 ### Features
 
-My platform will include and not limited to foolowing fuctionality:
-1.NFT Minting: Artists and creators can mint new NFTs, specifying details like title, description, and royalty percentages.
-2.NFT Browsing and Discovery: A feature-rich browsing experience that allows users to discover NFTs by categories, collections, or artists, including search and filter options.
-3.Buying NFTs: Secure transaction processes for users to buy NFTs, either through bidding in auctions or purchasing at fixed prices.
-4.Selling and Trading NFTs: Enable users to list their NFTs for sale or trade, including the ability to accept offers from potential buyers.
-5.User Dashboards: Personalized dashboards for users to track their activity, manage their collections, and view transaction history.
+- **CRUD Functionality:** Full suite of CRUD capabilities for managing data and content easily and efficiently within the platform.
+- **Decentralized Identity & Authentication:** Secure, privacy-focused user authentication.
+- **Smart Contract Management:** Tools for easy deployment and management of smart contracts.
+- **Real-time Data Synchronization:** Ensures up-to-date and consistent data across the network.
+- **Token & Wallet Integration:** Seamless transaction and token management capabilities.
+- **Decentralized Storage:** High-security, accessible, and redundant storage solutions.
+- **User-Friendly Interface:** Accessible design for users of all experience levels.
+- **Cross-platform Compatibility:** Consistent user experience across web and mobile.
+- **Community Governance:** User participation in platform decisions and developments.
+- **Developer Tools:** Comprehensive resources including SDKs, APIs, and documentation.
+- **Scalability & Cost-Efficiency:** Leveraging Internet Computer technology for efficient scaling.
 
 ## Implementation
 
 ### Tech Stack
 
-Frontend:Javascript, React, CSS
-Backend: Node, Express, Motoko
+**Frontend:** Javascript, React, CSS
 
-### APIs
+**Backend:** Node.js, Motoko
 
-To develop a comprehensive NFT marketplace,there are two primary components: the NFT products themselves and a digital currency (token) that can be used within the platform for transactions.
+**Tool:** ICSDK
 
-### Sitemap
+### Before start
 
-For a comprehensive NFT marketplace, having distinct pages dedicated to discovery, minting, and user-owned NFTs (MyNFTs) is essential for a seamless user experience. Below is an overview of the purpose and key features for each of these pages: 1. Discover Page: To allow users to explore and discover NFTs available for purchase or auction on the platform. 2. Minting Page: To provide creators and artists with a simple and intuitive interface for creating (minting) new NFTs. 3. MyNFTs Page: To enable users to view and manage their own NFT collection, including items they've created, bought, or are currently selling.
+Before you begin developing with Dkeeper, ensuring your development environment is correctly set up is crucial. Here's how to install the necessary SDK tools across different operating systems:
 
-### Mockups
+#### For macOS and Linux Users:
 
-TBD
-
-### Data
-
-TBD
-
-### Endpoints
-
-TBD
-
-### Auth
-
-TBD
-
-## Roadmap
-
-Sprint One: Setting up frontend website by EOD of Feb 18th.
-Sprint Two: Migrating token and NFT and setting up backend server by EOD od Feb 22th.
-Sprint Three: Testing and Debugging by EOD of Feb 25.
-
-## Nice-to-haves
-
-I am going to design my own Crypto Token for trading NFT.
-
-1. start local dfx
+To install the DFINITY SDK, execute the following command in your terminal:
 
 ```
-dfx start --background
+sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 ```
 
-2. Run NPM server
+This command fetches and runs the install script directly from the DFINITY website, setting up the SDK on your system.
 
-```
-npm run dev
+#### For Windows Users:
 
-```
+Currently, there is no native support for the DFINITY SDK (`dfx`) on Windows. However, Windows users can still develop for the Internet Computer by installing the Windows Subsystem for Linux (WSL). Through WSL, you can run `dfx` and other Linux applications on your Windows system. For detailed instructions on setting up WSL and `dfx` on Windows, please visit:
 
-3. Deploy canisters
+[Installing DFINITY SDK on Windows](https://internetcomputer.org/docs/current/developer-docs/getting-started/install/)
 
-```
-https://4rylk-6yaaa-aaaao-a3ibq-cai.icp0.io/
+#### Additional Resources:
 
+Once you have the SDK installed, familiarize yourself with the following documentation to effectively utilize the Dkeeper and Internet Computer platform:
 
+- [Quick Start Guide](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally): Get your local development environment ready.
+- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install): Explore the functionalities of the DFINITY SDK.
+- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko): Dive into Motoko for smart contract development.
+- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual): A quick guide to Motoko syntax and features.
 
-```
-
-# Dkeeper
-
-Welcome to your new Dkeeper project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
-
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
-To learn more before you start working with Dkeeper, see the following documentation available online:
-
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
-
+Ensuring your environment is set up correctly from the beginning will streamline your development process, allowing you to focus on building innovative solutions on the Dkeeper platform. We're excited to see what you will create!
 If you want to start working on your project right away, you might want to try the following commands:
 
 ```bash
@@ -105,7 +68,7 @@ dfx help
 dfx canister --help
 ```
 
-## Running the project locally
+### Running the project locally
 
 If you want to test your project locally, you can use the following commands:
 
@@ -134,6 +97,14 @@ npm start
 ```
 
 Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+
+### Running the project on Internet
+
+To experience Dkeeper live in action, visit our deployed application on the Internet Computer platform:
+
+- [Dkeeper](https://4rylk-6yaaa-aaaao-a3ibq-cai.icp0.io/)
+
+This live version provides you with hands-on interaction with Dkeeper's full suite of features without the need for local setup.
 
 ### Note on frontend environment variables
 
