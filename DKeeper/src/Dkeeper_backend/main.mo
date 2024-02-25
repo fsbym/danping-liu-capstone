@@ -32,6 +32,10 @@ actor DKeeper {
         let listBack = List.drop(notes, id + 1);
         notes := List.append(listFront, listBack);
     
-    }
+    };
+
+    public shared (msg) func whoami() : async Principal {
+        msg.caller
+    };
 
 }
