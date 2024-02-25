@@ -3,7 +3,7 @@ import HighlightIcon from "@mui/icons-material/Highlight";
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <h1>
         <HighlightIcon />
         !Keeper
