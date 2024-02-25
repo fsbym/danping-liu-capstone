@@ -12,7 +12,7 @@ body {
   padding: 0 16px;
 }
 
-header {
+.header {
   background-color: #0ec579;
   margin: auto -16px;
   padding: 16px 32px;

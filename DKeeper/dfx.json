@@ -4,17 +4,22 @@
       "main": "src/Dkeeper_backend/main.mo",
       "type": "motoko"
     },
+    "internet_identity": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      }
+    },
     "Dkeeper_frontend": {
-      "dependencies": [
-        "Dkeeper_backend"
-      ],
+      "dependencies": ["Dkeeper_backend"],
       "frontend": {
         "entrypoint": "src/Dkeeper_frontend/src/index.html"
       },
-      "source": [
-        "src/Dkeeper_frontend/assets",
-        "dist/Dkeeper_frontend/"
-      ],
+      "source": ["src/Dkeeper_frontend/assets", "dist/Dkeeper_frontend/"],
       "type": "assets"
     }
   },
