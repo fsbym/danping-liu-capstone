@@ -26,7 +26,7 @@ Welcome to Dkeeper, your innovative venture into blockchain technology and the I
 
 **Frontend:** Javascript, React, CSS
 
-**Backend:** Node.js, Motoko
+**Backend:** Node.js, Motoko, blockchain
 
 **Tool:** ICSDK
 
@@ -73,6 +73,9 @@ dfx canister --help
 If you want to test your project locally, you can use the following commands:
 
 ```bash
+# Install the necessary packages
+npm install
+
 # Starts the replica, running in the background
 dfx start --background
 
