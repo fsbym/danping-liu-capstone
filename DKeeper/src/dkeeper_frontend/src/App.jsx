@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { dkeeper_backend } from "declarations/dkeeper_backend";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import { Dkeeper_backend } from "../../../declarations/Dkeeper_backend";
+import "./assets/styles.css";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const dkeeper = Dkeeper_backend;
+  const dkeeper = dkeeper_backend;
 
   function addNote(newNote) {
     setNotes((prevNotes) => {

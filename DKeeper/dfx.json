@@ -1,24 +1,29 @@
 {
   "canisters": {
-    "Dkeeper_backend": {
-      "main": "src/Dkeeper_backend/main.mo",
-      "type": "motoko",
-      "controllers": [
-        "q27se-bjoq6-4hbfd-4qga7-p5iz4-o2esz-waw2c-ujhwz-jgbub-wrxxd-bae",
-        "g5ol2-szlgi-lr4pf-4zo46-tugsr-5tmot-enkpt-4b5wt-kelgw-ijpyi-nae"
-      ]
+    "dkeeper_backend": {
+      "main": "src/dkeeper_backend/main.mo",
+      "type": "motoko"
     },
-    "Dkeeper_frontend": {
-      "dependencies": ["Dkeeper_backend"],
-      "frontend": {
-        "entrypoint": "src/Dkeeper_frontend/src/index.html"
-      },
-      "source": ["src/Dkeeper_frontend/assets", "dist/Dkeeper_frontend/"],
+    "dkeeper_frontend": {
+      "dependencies": [
+        "dkeeper_backend"
+      ],
+      "source": [
+        "src/dkeeper_frontend/dist"
+      ],
       "type": "assets",
-      "controllers": [
-        "q27se-bjoq6-4hbfd-4qga7-p5iz4-o2esz-waw2c-ujhwz-jgbub-wrxxd-bae",
-        "g5ol2-szlgi-lr4pf-4zo46-tugsr-5tmot-enkpt-4b5wt-kelgw-ijpyi-nae"
-      ]
+      "workspace": "dkeeper_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
     }
   },
   "defaults": {
